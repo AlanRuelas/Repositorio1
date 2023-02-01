@@ -1,28 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mx.com.pqtx.dominio;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author practidesarrollo
- */
+
 @Entity
 @Table(name = "branches")
 @NamedQueries({
@@ -34,10 +22,7 @@ public class BranchEO implements Serializable {
     @Id
     @Size(min = 1, max = 45)
     private String name;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "orgnBranch", fetch = FetchType.EAGER)
-    private List<RouteEO> routeEOList;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "destBranch", fetch = FetchType.EAGER)
-    private List<RouteEO> routeEOList1;
+   
 
     public BranchEO() {
     }
@@ -54,21 +39,7 @@ public class BranchEO implements Serializable {
         this.name = name;
     }
 
-    public List<RouteEO> getRouteEOList() {
-        return routeEOList;
-    }
 
-    public void setRouteEOList(List<RouteEO> routeEOList) {
-        this.routeEOList = routeEOList;
-    }
-
-    public List<RouteEO> getRouteEOList1() {
-        return routeEOList1;
-    }
-
-    public void setRouteEOList1(List<RouteEO> routeEOList1) {
-        this.routeEOList1 = routeEOList1;
-    }
 
     @Override
     public int hashCode() {

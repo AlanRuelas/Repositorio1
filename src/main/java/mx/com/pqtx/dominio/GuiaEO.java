@@ -7,19 +7,14 @@ package mx.com.pqtx.dominio;
 
 import java.io.Serializable;
 import java.util.Date;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
@@ -58,15 +53,12 @@ public class GuiaEO implements Serializable {
     private Float total;
     @Size(max = 45)
     private String comments;
-    @JoinColumn(name = "orgn_clnt_id", referencedColumnName = "id")
-    @ManyToOne(fetch = FetchType.EAGER)
-    private ClntEO orgnClnt;
-    @JoinColumn(name = "dest_clnt_id", referencedColumnName = "id")
-    @ManyToOne(fetch = FetchType.EAGER)
-    private ClntEO destClnt;
-    @JoinColumn(name = "route_id", referencedColumnName = "id")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private RouteEO route;
+    @Column(name = "orgn_clnt_id")
+    private Integer orgnClnt;
+    @Column(name = "dest_clnt_id")
+    private Integer destClnt;
+    @Column(name = "route_id")
+    private Integer route;
 
     public GuiaEO() {
     }
@@ -139,27 +131,27 @@ public class GuiaEO implements Serializable {
         this.comments = comments;
     }
 
-    public ClntEO getOrgnClnt() {
+    public Integer getOrgnClnt() {
         return orgnClnt;
     }
 
-    public void setOrgnClnt(ClntEO orgnClnt) {
+    public void setOrgnClnt(Integer orgnClnt) {
         this.orgnClnt = orgnClnt;
     }
 
-    public ClntEO getDestClnt() {
+    public Integer getDestClnt() {
         return destClnt;
     }
 
-    public void setDestClnt(ClntEO destClnt) {
+    public void setDestClnt(Integer destClnt) {
         this.destClnt = destClnt;
     }
 
-    public RouteEO getRoute() {
+    public Integer getRoute() {
         return route;
     }
 
-    public void setRoute(RouteEO route) {
+    public void setRoute(Integer route) {
         this.route = route;
     }
 

@@ -6,19 +6,13 @@
 package mx.com.pqtx.dominio;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
@@ -30,7 +24,7 @@ import javax.validation.constraints.Size;
 @NamedQueries({
     @NamedQuery(name = "RouteEO.findAll", query = "SELECT r FROM RouteEO r")
     , @NamedQuery(name = "RouteEO.findById", query = "SELECT r FROM RouteEO r WHERE r.id = :id")
-    , @NamedQuery(name = "RouteEO.findByTime", query = "SELECT r FROM RouteEO r WHERE r.time = :time")})
+    , @NamedQuery(name = "RouteEO.findByDaysOfTravel", query = "SELECT r FROM RouteEO r WHERE r.daysOfTravel = :daysOfTravel")})
 public class RouteEO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -39,15 +33,12 @@ public class RouteEO implements Serializable {
     private String id;
     @Basic(optional = false)
     @Size(min = 1, max = 45)
-    private String time;
-    @JoinColumn(name = "orgn_branch", referencedColumnName = "name")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private BranchEO orgnBranch;
-    @JoinColumn(name = "dest_branch", referencedColumnName = "name")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private BranchEO destBranch;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "route", fetch = FetchType.EAGER)
-    private List<GuiaEO> guias;
+    @Column(name = "days_of_travel")
+    private Integer daysOfTravel;
+    @Column(name = "orgn_branch")
+    private String orgnBranch;
+    @Column(name = "dest_branch")
+    private String destBranch;
 
     public RouteEO() {
     }
@@ -56,9 +47,9 @@ public class RouteEO implements Serializable {
         this.id = id;
     }
 
-    public RouteEO(String id, String time) {
+    public RouteEO(String id, Integer daysOfTravel) {
         this.id = id;
-        this.time = time;
+        this.daysOfTravel = daysOfTravel;
     }
 
     public String getId() {
@@ -69,36 +60,28 @@ public class RouteEO implements Serializable {
         this.id = id;
     }
 
-    public String getTime() {
-        return time;
+    public Integer getDaysOfTravel() {
+        return daysOfTravel;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setDaysOfTravel(Integer daysOfTravel) {
+        this.daysOfTravel = daysOfTravel;
     }
 
-    public BranchEO getOrgnBranch() {
+    public String getOrgnBranch() {
         return orgnBranch;
     }
 
-    public void setOrgnBranch(BranchEO orgnBranch) {
+    public void setOrgnBranch(String orgnBranch) {
         this.orgnBranch = orgnBranch;
     }
 
-    public BranchEO getDestBranch() {
+    public String getDestBranch() {
         return destBranch;
     }
 
-    public void setDestBranch(BranchEO destBranch) {
+    public void setDestBranch(String destBranch) {
         this.destBranch = destBranch;
-    }
-
-    public List<GuiaEO> getGuias() {
-        return guias;
-    }
-
-    public void setGuias(List<GuiaEO> guias) {
-        this.guias = guias;
     }
 
     @Override

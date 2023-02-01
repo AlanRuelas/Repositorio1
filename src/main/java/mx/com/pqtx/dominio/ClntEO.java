@@ -1,32 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mx.com.pqtx.dominio;
 
 import java.io.Serializable;
-import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
 
-/**
- *
- * @author practidesarrollo
- */
 @Entity
 @Table(name = "clnts")
 @NamedQueries({
@@ -47,13 +31,6 @@ public class ClntEO implements Serializable {
     @Column(name = "last_name")
     private String lastName;
     private Integer phone;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "addrs", referencedColumnName = "id")
-    private AddrEO address;
-    @OneToMany(mappedBy = "orgnClnt", fetch = FetchType.EAGER)
-    private List<GuiaEO> guiasAsOrgn;
-    @OneToMany(mappedBy = "destClnt", fetch = FetchType.EAGER)
-    private List<GuiaEO> guiasAsDest;
 
     public ClntEO() {
     }
@@ -94,29 +71,6 @@ public class ClntEO implements Serializable {
         this.phone = phone;
     }
 
-    public AddrEO getAddress() {
-        return address;
-    }
-
-    public void setAddress(AddrEO address) {
-        this.address = address;
-    }
-
-    public List<GuiaEO> getGuiasAsOrgn() {
-        return guiasAsOrgn;
-    }
-
-    public void setGuiasAsOrgn(List<GuiaEO> guiasAsOrgn) {
-        this.guiasAsOrgn = guiasAsOrgn;
-    }
-
-    public List<GuiaEO> getGuiasAsDest() {
-        return guiasAsDest;
-    }
-
-    public void setGuiasAsDest(List<GuiaEO> guiasAsDest) {
-        this.guiasAsDest = guiasAsDest;
-    }
 
     @Override
     public int hashCode() {
@@ -140,7 +94,7 @@ public class ClntEO implements Serializable {
 
     @Override
     public String toString() {
-        return "ClntEO{" + "id=" + id + ", name=" + name + ", lastName=" + lastName + ", phone=" + phone + ", address=" + address + '}';
+        return "ClntEO{" + "id=" + id + ", name=" + name + ", lastName=" + lastName + ", phone=" + phone + '}';
     }
 
     

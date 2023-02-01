@@ -1,31 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package mx.com.pqtx.dominio;
 
 import java.io.Serializable;
-import java.util.List;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
-/**
- *
- * @author practidesarrollo
- */
+
 @Entity
 @Table(name = "routes_servs_costs")
 @NamedQueries({ 
@@ -36,28 +19,23 @@ public class RouteServCostEO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id 
-    @JoinColumn(name = "route", referencedColumnName = "route_id")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
-    private String route;
+    private Integer route;
     
     @Id
-    @JoinColumn(name = "serv", referencedColumnName = "type")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private String serv;
     
     @Basic (optional = false)
-    @Column(name = "cost" ) 
-    private String cost;
+    private float cost;
      
 
     public RouteServCostEO() {
     }
 
-    public String getRoute() {
+    public Integer getRoute() {
         return route;
     }
 
-    public void setRoute(String route) {
+    public void setRoute(Integer route) {
         this.route = route;
     }
 
@@ -69,11 +47,11 @@ public class RouteServCostEO implements Serializable {
         this.serv = serv;
     }
 
-    public String getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 

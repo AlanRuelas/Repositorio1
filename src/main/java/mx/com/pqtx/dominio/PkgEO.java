@@ -7,16 +7,11 @@ package mx.com.pqtx.dominio;
 
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
@@ -37,8 +32,6 @@ public class PkgEO implements Serializable {
     private String type;
     @Size(max = 45)
     private String description;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "pkg", fetch = FetchType.EAGER)
-    private List<BranchPkgCostEO> costs;
             
     public PkgEO() {
     }

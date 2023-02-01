@@ -36,18 +36,14 @@ public class BranchPkgCostEO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id 
-    @JoinColumn(name = "branch", referencedColumnName = "name")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private String branch;
     
     @Id
-    @JoinColumn(name = "pkg", referencedColumnName = "type")
-    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private String pkg;
     
     @Basic (optional = false)
     @Column(name = "cost" ) 
-    private String cost;
+    private float cost;
      
 
     public BranchPkgCostEO() {
@@ -69,11 +65,11 @@ public class BranchPkgCostEO implements Serializable {
         this.pkg = pkg;
     }
 
-    public String getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 
