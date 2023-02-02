@@ -15,25 +15,54 @@
             <h:form id="form">
                 <p:growl id="msgs" showDetail="true" />
 
-                <p:panel header="Select a service" style="margin-bottom:10px;">
+                <p:panel header="Select a service" style="margin-bottom:10px;" >
                     <h:panelGrid columns="2" cellpadding="5">
                         <p:outputLabel for="sucursal" value="Sucursal "/>
-                        <p:selectOneMenu id="sucursal" value="#{pkgBean.selectedBranch}" style="width:150px">
-                            <p:ajax listener="#{pkgBean.onBranchChange}" update="form:servicio"/>
-                            <f:selectItem itemLabel="Select sucursal" itemValue="" noSelectionOption="true"/>
-                            <f:selectItems value="#{pkgBean.branches}" var="branch" itemValue="#{branch}" itemLabel="#{branch.name}" />
+                        <p:selectOneMenu id="sucursal" value="#{indexBean.selectedBranch}" 
+                                         valueChangeListener="#{indexBean.onBranchChange()}" 
+                                         converter="genericConverter" style="width:150px">
+                            <p:ajax event="valueChange" update="@form"/>
+                            
+                            <f:selectItems value="#{indexBean.branches}" var="branch" itemValue="#{branch}" itemLabel="#{branch.name}" />
                         </p:selectOneMenu>
 
                         <p:outputLabel for="servicio" value="Servicio: "/>
-                        <p:selectOneMenu id="servicio" value="#{pkgBean.selectedService}" style="width:150px">
+                        <p:selectOneMenu id="servicio" value="#{indexBean.selectedService}" style="width:150px">
                             <f:selectItem itemLabel="Select servicio" itemValue="" noSelectionOption="true"/>
-                            <f:selectItems  value="#{pkgBean.services}" var="service" itemValue="#{service}" itemLabel="#{service.type}"/>
+                            <f:selectItems  value="#{indexBean.services}" var="service" itemValue="#{service}" itemLabel="#{service.type}"/>
                         </p:selectOneMenu>
                     </h:panelGrid>
 
-
                 </p:panel>
             </h:form>
+
+            <h:form >
+                <h:panelGrid columns="1">
+                    <h5>Datos</h5>
+                    <div class="grid ui-fluid">
+                        <div class="col-12 md:col-4">
+                            <div class="ui-inputgroup">
+                                <div class="ui-inputgroup-addon"><i class="pi pi-user"></i></div>
+                                <p:inputText placeholder="Nombre" value="#{indexBean.client.name}"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 md:col-4">
+                            <div class="ui-inputgroup">
+                                <p:inputText placeholder="Apellido" value="#{indexBean.client.lastName}"/>
+                            </div>
+                        </div>
+
+                        <div class="col-12 md:col-4">
+                            <div class="ui-inputgroup">
+                                <p:inputText placeholder="Telefono" value="#{indexBean.client.phone}"/>
+                            </div>
+                        </div>
+                    </div>
+                </h:panelGrid>
+                    <p:commandButton  type="button" value="Agregar" actionListener="#{indexBean.addClient}"/>
+            </h:form>
+            
         </div>
     </h:body>
 </html>

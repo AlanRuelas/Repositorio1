@@ -53,6 +53,16 @@ public class ClntDAOImpl implements ClntDAO{
         ClntEO clntEO = (ClntEO) query.getSingleResult();
         return ClntMapper.INSTANCE.toDTO(clntEO);
     }
+    
+    @Override
+    public ClntDTO findClntByPersonalData(ClntDTO clntDTO){
+        Query query = em.createNamedQuery("ClntEO.findByPersonalData");
+        query.setParameter("name", clntDTO.getName());
+        query.setParameter("lastName", clntDTO.getLastName());
+        query.setParameter("phone", clntDTO.getPhone());
+        ClntEO clntEO = (ClntEO) query.getSingleResult();
+        return ClntMapper.INSTANCE.toDTO(clntEO);
+    }
 
     @Override
     public void insertClnt(ClntDTO clntDTO) {

@@ -7,6 +7,7 @@ C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\dominio\BranchPkgCostEO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\dominio\ClntEO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\dominio\ServDetailEO.java
+C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\web\IndexBean.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dto\GuiaDTO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\RouteServCostDAOImpl.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\ServDAO.java
@@ -15,6 +16,7 @@ C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\ServDetailDAOImpl.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\mapper\PkgDetailMapper.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dto\ClntDTO.java
+C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\core\ValidatorImpl.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\dominio\PkgDetailEO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\ClntDAO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\PkgDetailDAOImpl.java
@@ -26,7 +28,6 @@ C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\AddrDAO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dto\BranchPkgCostDTO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\core\EnlisterImpl.java
-C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\web\PkgBean.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\mapper\ClntMapper.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dto\ServDTO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dto\PkgDTO.java
@@ -35,6 +36,7 @@ C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\PkgDetailDAO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\BranchDAOImpl.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\RouteDAOImpl.java
+C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\core\Validator.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dao\ServDAOImpl.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\dominio\RouteServCostEO.java
 C:\Users\practidesarrollo\Documents\NetBeansProjects\ProyectoGuias\src\main\java\mx\com\pqtx\datos\dto\RouteDTO.java

@@ -6,7 +6,7 @@ import mx.com.pqtx.dominio.RouteServCostEO;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-02-01T11:18:37-0700",
+    date = "2023-02-01T12:53:15-0700",
     comments = "version: 1.4.0.Final, compiler: javac, environment: Java 1.8.0_231 (Oracle Corporation)"
 )
 public class RouteServCostMapperImpl implements RouteServCostMapper {

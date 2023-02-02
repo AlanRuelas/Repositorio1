@@ -16,6 +16,7 @@ mx\com\pqtx\mapper\BranchServCostMapper.class
 mx\com\pqtx\datos\dao\ServDetailDAO.class
 mx\com\pqtx\datos\dto\BranchDTO.class
 mx\com\pqtx\datos\dao\PkgDAO.class
+mx\com\pqtx\core\Validator.class
 mx\com\pqtx\dominio\BranchServCostEO.class
 mx\com\pqtx\datos\dao\PkgDAOImpl.class
 mx\com\pqtx\mapper\ClntMapper.class
@@ -28,7 +29,6 @@ mx\com\pqtx\datos\dao\BranchDAO.class
 mx\com\pqtx\datos\dao\BranchServCostDAO.class
 mx\com\pqtx\dominio\PkgDetailEO.class
 mx\com\pqtx\mapper\GuiaMapper.class
-mx\com\pqtx\web\PkgBean.class
 mx\com\pqtx\datos\dao\BranchServCostDAOImpl.class
 mx\com\pqtx\mapper\GuiaMapperImpl.class
 mx\com\pqtx\mapper\ClntMapperImpl.class
@@ -38,6 +38,7 @@ mx\com\pqtx\datos\dao\AddrDAOImpl.class
 mx\com\pqtx\datos\dao\PkgDetailDAO.class
 mx\com\pqtx\datos\dto\BranchPkgCostDTO.class
 mx\com\pqtx\mapper\ServMapper.class
+mx\com\pqtx\core\ValidatorImpl.class
 mx\com\pqtx\mapper\ServDetailMapper.class
 mx\com\pqtx\datos\dto\BranchServCostDTO.class
 mx\com\pqtx\mapper\RouteMapper.class
@@ -64,6 +65,7 @@ mx\com\pqtx\dominio\GuiaEO.class
 mx\com\pqtx\mapper\BranchPkgCostMapper.class
 mx\com\pqtx\datos\dao\RouteDAO.class
 mx\com\pqtx\datos\dao\BranchPkgCostDAO.class
+mx\com\pqtx\web\IndexBean.class
 mx\com\pqtx\datos\dao\AddrDAO.class
 mx\com\pqtx\datos\dto\ClntDTO.class
 mx\com\pqtx\datos\dao\ServDetailDAOImpl.class

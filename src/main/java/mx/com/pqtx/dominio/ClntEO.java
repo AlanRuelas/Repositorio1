@@ -18,7 +18,9 @@ import javax.validation.constraints.Size;
     , @NamedQuery(name = "ClntEO.findById", query = "SELECT c FROM ClntEO c WHERE c.id = :id")
     , @NamedQuery(name = "ClntEO.findByName", query = "SELECT c FROM ClntEO c WHERE c.name = :name")
     , @NamedQuery(name = "ClntEO.findByLastName", query = "SELECT c FROM ClntEO c WHERE c.lastName = :lastName")
-    , @NamedQuery(name = "ClntEO.findByPhone", query = "SELECT c FROM ClntEO c WHERE c.phone = :phone")})
+    , @NamedQuery(name = "ClntEO.findByPhone", query = "SELECT c FROM ClntEO c WHERE c.phone = :phone")
+    , @NamedQuery(name = "ClntEO.findByPersonalData", 
+            query = "SELECT c FROM ClntEO c WHERE c.name = :name AND c.lastName = :lastName AND c.phone = :phone")})
 public class ClntEO implements Serializable {
 
     private static final long serialVersionUID = 1L;

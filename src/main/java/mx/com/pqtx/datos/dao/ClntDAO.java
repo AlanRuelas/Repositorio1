@@ -14,6 +14,8 @@ public interface ClntDAO {
         
     public ClntDTO findClntByPhone(ClntDTO clntDTO);
     
+    public ClntDTO findClntByPersonalData(ClntDTO clntDTO);
+    
     public void insertClnt(ClntDTO clntDTO);
     
     public void updateClnt(ClntDTO clntDTO);
